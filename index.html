@@ -140,6 +140,82 @@ text-align:center;margin-top:20px;color:#aaa;font-size:13px
 .hero{flex-direction:column;text-align:center}
 .hero-right img{margin-top:20px;width:220px}
 }
+
+/* CARD SYSTEM */
+.card{
+background:#fff;
+margin:15px 0;
+padding:18px;
+border-radius:14px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+.card:hover{
+transform:translateY(-3px);
+}
+
+/* HEADER */
+.card-header{
+display:flex;
+align-items:center;
+gap:12px;
+}
+.card-header img{
+width:50px;
+border-radius:10px;
+}
+
+/* GRID */
+.grid{
+display:flex;
+justify-content:space-between;
+margin:12px 0;
+font-size:14px;
+}
+
+/* CODE */
+.code{
+background:#ffeaa7;
+padding:10px;
+border-radius:8px;
+text-align:center;
+margin:10px 0;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* BUTTONS */
+.btn-row{
+display:flex;
+gap:10px;
+}
+.btn{
+flex:1;
+padding:12px;
+border-radius:8px;
+text-align:center;
+text-decoration:none;
+font-weight:bold;
+cursor:pointer;
+}
+.main{
+background:#6c5ce7;
+color:#fff;
+}
+.guide{
+border:2px solid #000;
+background:#fff;
+}
+
+/* STEPS */
+.steps{
+display:none;
+margin-top:10px;
+background:#f1f1f1;
+padding:10px;
+border-radius:8px;
+font-size:14px;
+}
 </style>
 
 </head>
@@ -186,6 +262,104 @@ text-align:center;margin-top:20px;color:#aaa;font-size:13px
 
 <!-- CONTENT AREA -->
 <div class="container" id="apps">
+
+<!-- TIMES PRIME -->
+<div class="card app">
+<div class="card-header">
+<img src="https://offline-agent-bk.s3.ap-south-1.amazonaws.com/profit_share1710412785003">
+<div>
+<h3>🔥 Times Prime Lite Offer</h3>
+<span style="color:green;font-weight:bold">₹400 Profit + ₹700 OFF</span>
+</div>
+</div>
+
+<p style="color:red;font-weight:bold;">⏳ Limited Time Offer</p>
+
+<div class="grid">
+<div>Profit<br><b>₹400</b></div>
+<div>Time<br><b>15 Days</b></div>
+</div>
+
+<div class="code" onclick="copyCode(this)">🎁 Code: TIMES500</div>
+
+<div class="btn-row">
+<a href="https://earningshub.co/MOHD-QAMIL-177739441420546215199" target="_blank" class="btn main">
+💰 Get ₹400
+</a>
+<button class="btn guide" onclick="toggleSteps('s1')">📖 Steps</button>
+</div>
+
+<div id="s1" class="steps">
+✔ Link open karo<br>
+✔ Code apply karo<br>
+✔ Subscription lo<br>
+✔ ₹400 earn 🤑
+</div>
+
+<p style="color:green;font-size:13px;">
+✔ ₹200 Amazon Voucher<br>
+✔ Instant Tracking
+</p>
+</div>
+
+
+<!-- PAYTM -->
+<div class="card free app">
+<div class="card-header">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Paytm_logo.png">
+<div>
+<h3>Paytm Offer</h3>
+<span style="color:green;font-weight:bold">₹100 Bonus</span>
+</div>
+</div>
+
+<div class="grid">
+<div>Bonus<br><b>₹100</b></div>
+<div>Type<br><b>UPI</b></div>
+</div>
+
+<div class="code">🎁 Signup Bonus</div>
+
+<div class="btn-row">
+<a href="https://p.paytm.me/xCTH/svtl01kg?utmt=042909" target="_blank" class="btn main">
+💰 Get ₹100
+</a>
+</div>
+
+<p style="color:green;font-size:13px;">
+✔ Instant Cashback<br>
+✔ Trusted App
+</p>
+</div>
+
+
+<!-- PHONEPE -->
+<div class="card free app">
+<div class="card-header">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/71/PhonePe_Logo.png">
+<div>
+<h3>PhonePe Offer</h3>
+<span style="color:green;font-weight:bold">₹200 Cashback</span>
+</div>
+</div>
+
+<div class="grid">
+<div>Bonus<br><b>₹200</b></div>
+<div>Type<br><b>UPI</b></div>
+</div>
+
+<div class="btn-row">
+<a href="https://phon.pe/0q3oo7gt" target="_blank" class="btn main">
+💰 Claim ₹200
+</a>
+</div>
+
+<p style="color:green;font-size:13px;">
+✔ Easy Signup<br>
+✔ Instant Reward
+</p>
+</div>
+
 <!-- YAHAN TUM CARDS DALOGE -->
 </div>
 
@@ -225,6 +399,25 @@ text-align:center;margin-top:20px;color:#aaa;font-size:13px
 <div class="copy">© 2026 EarnPro Hub</div>
 
 </div>
+<script>
+function toggleSteps(id){
+let x=document.getElementById(id);
+x.style.display=(x.style.display==="block")?"none":"block";
+}
 
+function copyCode(el){
+navigator.clipboard.writeText(el.innerText);
+el.innerText="✅ Copied!";
+setTimeout(()=>{el.innerText="🎁 Code: TIMES500"},2000);
+}
+
+/* SEARCH */
+document.querySelector(".search-box input").addEventListener("keyup",function(){
+let val=this.value.toLowerCase();
+document.querySelectorAll(".card").forEach(card=>{
+card.style.display=card.innerText.toLowerCase().includes(val)?"block":"none";
+});
+});
+</script>
 </body>
 </html>

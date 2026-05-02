@@ -684,6 +684,17 @@ document.querySelectorAll(".card").forEach(card=>{
 card.style.display=card.innerText.toLowerCase().includes(val)?"block":"none";
 });
 });
+function toggleSteps(id){
+let el=document.getElementById(id);
+el.style.display=(el.style.display==="block")?"none":"block";
+}
+
+function copyCode(el,text){
+navigator.clipboard.writeText(text);
+let old=text;
+el.innerText="✅ Copied!";
+setTimeout(()=>{el.innerText=old},2000);
+}
 </script>
 </body>
 </html>

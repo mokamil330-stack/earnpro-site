@@ -870,6 +870,26 @@ card.style.display = card.innerText.toLowerCase().includes(val) ? "block" : "non
   function subscribe(){
 alert("✅ Thanks! You will get latest earning updates soon.");
 }
+
+function filterApp(category){
+
+let cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+
+if(category === "all"){
+card.style.display = "block";
+}
+else if(card.classList.contains(category)){
+card.style.display = "block";
+}
+else{
+card.style.display = "none";
+}
+
+});
+
+}
 </script>
 </body>
 </html>

@@ -485,7 +485,9 @@ max-width:95%;
 <div>Type<br><b>Payment</b></div>
 </div>
 
-<div class="code" onclick="copyCode(this,'🎁 Code: GPAY21')">🎁 Code: GPAY21</div>
+<div class="code" onclick="copyCode(this)" data-code="GPAY21">
+🎁 Code: GPAY21
+</div>
 
 <div class="btn-row">
 <a href="https://gpay.app.goo.gl/invite-m8rf71" target="_blank" class="btn main">💰 Earn ₹21</a>
@@ -606,7 +608,9 @@ max-width:95%;
 <div>Bonus<br><b>₹10</b></div>
 </div>
 
-<div class="code" onclick="copyCode(this,'🎁 Code: AXCWCMT7')">🎁 Code: AXCWCMT7</div>
+<div class="code" onclick="copyCode(this)" data-code="AXCWCMT7">
+🎁 Code: AXCWCMT7
+</div>
 
 <div class="btn-row">
 <a href="https://app.signal.redrob.io/bo7k3of" target="_blank" class="btn main">💰 Get ₹10</a>
@@ -690,35 +694,35 @@ max-width:95%;
 
 </div>
 <script>
+
+/* STEP TOGGLE */
 function toggleSteps(id){
-let x=document.getElementById(id);
-x.style.display=(x.style.display==="block")?"none":"block";
+let el = document.getElementById(id);
+el.style.display = (el.style.display === "block") ? "none" : "block";
 }
 
+/* COPY ONLY CODE (NOT FULL TEXT) */
 function copyCode(el){
-navigator.clipboard.writeText(el.innerText);
-el.innerText="✅ Copied!";
-setTimeout(()=>{el.innerText="🎁 Code: TIMES500"},2000);
+let code = el.getAttribute("data-code"); // sirf code uthayega
+navigator.clipboard.writeText(code);
+
+let original = el.innerText;
+el.innerText = "✅ Copied: " + code;
+
+setTimeout(()=>{
+el.innerText = original;
+},2000);
 }
 
 /* SEARCH */
 document.querySelector(".search-box input").addEventListener("keyup",function(){
-let val=this.value.toLowerCase();
-document.querySelectorAll(".card").forEach(card=>{
-card.style.display=card.innerText.toLowerCase().includes(val)?"block":"none";
-});
-});
-function toggleSteps(id){
-let el=document.getElementById(id);
-el.style.display=(el.style.display==="block")?"none":"block";
-}
+let val = this.value.toLowerCase();
 
-function copyCode(el,text){
-navigator.clipboard.writeText(text);
-let old=text;
-el.innerText="✅ Copied!";
-setTimeout(()=>{el.innerText=old},2000);
-}
+document.querySelectorAll(".card").forEach(card=>{
+card.style.display = card.innerText.toLowerCase().includes(val) ? "block" : "none";
+});
+});
+
 </script>
 </body>
 </html>

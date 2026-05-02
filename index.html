@@ -960,8 +960,8 @@ max-width:95%;
 <p style="font-size:13px;color:#aaa;">Join & never miss high-paying offers</p>
 
 <div class="subscribe">
-<input type="email" placeholder="Enter your email">
-<button onclick="subscribe()">→</button>
+<input type="email" id="email" placeholder="Enter your email">
+<button onclick="sendEmail()">→</button>
 </div>
 
 </div>
@@ -1023,6 +1023,17 @@ card.style.display = "none";
 
 });
 
+}
+
+function sendEmail(){
+let email = document.getElementById("email").value;
+
+fetch("https://script.google.com/macros/s/AKfycbyDpyiithBRXHHKKi_YJ8DMsrYlhsORke5zNP6SWOTH8I-pgQQTIeRV84vnOq7ssl5y0A/exec", {
+method: "POST",
+body: JSON.stringify({ email: email })
+})
+.then(res => alert("✅ Email Saved Successfully"))
+.catch(err => alert("Error"));
 }
 </script>
 </body>

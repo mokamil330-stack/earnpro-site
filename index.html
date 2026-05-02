@@ -2,697 +2,103 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<meta name="google-site-verification" content="YOUR_CODE_HERE">
-<meta name="description" content="Best Earn Money Apps 2026 | Refer and Earn | Free Cashback Apps India">
-<meta name="keywords" content="earn money apps, refer and earn india, cashback apps">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>EarnPro Hub | Earn Money Apps 2026</title>
+<meta name="description" content="Best Earn Money Apps 2026 | Refer and Earn India">
 
 <style>
-body{
-margin:0;
-font-family:Arial;
-background:#f4f6fb;
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{background:#f5f7fb}
+ .nav{
+display:flex;justify-content:space-between;
+padding:15px 20px;background:#fff
 }
 
-/* NAV */
-.nav{
-background:#6c5ce7;
-color:#fff;
-padding:15px;
-display:flex;
-justify-content:space-between;
+.logo{font-weight:bold;color:#6c5ce7}
+
+.hero{
+display:flex;justify-content:space-between;
+padding:40px;align-items:center
 }
 
-/* FILTER */
-.filter{
-text-align:center;
-margin:10px;
-}
-
-.filter button{
-padding:8px 15px;
-margin:5px;
-border-radius:20px;
-border:1px solid #6c5ce7;
-background:#fff;
-color:#6c5ce7;
-}
-
-/* CONTAINER */
-.container{
-max-width:900px;
-margin:auto;
-padding:10px;
-}
-
-/* CARD */
-.card{
-background:#fff;
-margin:15px 0;
-padding:18px;
-border-radius:14px;
-box-shadow:0 4px 15px rgba(0,0,0,0.08);
-}
-
-/* HEADER */
-.card-header{
-display:flex;
-gap:12px;
-align-items:center;
-}
-
-.card-header img{
-width:50px;
-height:50px;
-border-radius:10px;
-}
-
-/* GRID */
-.grid{
-display:flex;
-justify-content:space-between;
-margin:10px 0;
-font-size:14px;
-}
-
-/* CODE */
-.code{
-background:#ffe7a3;
-padding:10px;
-border-radius:8px;
-text-align:center;
-margin:10px 0;
-font-weight:bold;
-}
-
-/* BUTTON ROW */
-.btn-row{
-display:flex;
-gap:10px;
-margin-top:10px;
-}
+.hero img{width:200px}
 
 .btn{
-flex:1;
-padding:12px;
-border-radius:8px;
-text-align:center;
-text-decoration:none;
-font-weight:bold;
+background:#6c5ce7;color:#fff;
+padding:10px 15px;border-radius:8px;text-decoration:none
+}
+ .filter{text-align:center;margin:10px}
+.filter button{
+margin:5px;padding:8px 15px;border-radius:20px;
+border:1px solid #6c5ce7;background:#fff
+}
+.card{
+background:#fff;margin:15px;padding:15px;
+border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1)
 }
 
-/* BUTTON STYLE */
-.main{
-background:#6c5ce7;
-color:#fff;
+.code{
+background:#ffeaa7;padding:8px;border-radius:5px;
+text-align:center;margin:10px 0
 }
 
-.guide{
-border:2px solid #000;
-background:#fff;
+<script>
+function filterApp(cat){
+document.querySelectorAll('.card').forEach(c=>{
+c.style.display=(cat=="all"||c.classList.contains(cat))?"block":"none"
+})
 }
 
-/* STEPS */
-.steps{
-display:none;
-margin-top:10px;
-background:#f1f1f1;
-padding:10px;
-border-radius:8px;
+ .footer{
+background:#2d3436;color:#fff;
+text-align:center;padding:20px;margin-top:20px
 }
-
-.footer-ultra{
-background:linear-gradient(135deg,#0f172a,#1e293b);
-color:#fff;
-padding:60px 20px;
-position:relative;
-overflow:hidden;
-}
-
-/* WRAP */
-.footer-wrap{
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
-gap:40px;
-max-width:1100px;
-margin:auto;
-}
-
-/* LEFT */
-.f-left{
-flex:1;
-min-width:280px;
-}
-
-.f-left p{
-color:#aaa;
-margin:10px 0 20px;
-}
-
-/* COLUMNS */
-.f-cols{
-display:flex;
-gap:40px;
-}
-
-.f-cols h4{
-margin-bottom:10px;
-}
-
-.f-cols a{
-display:block;
-color:#bbb;
-text-decoration:none;
-margin:6px 0;
-transition:0.3s;
-}
-
-/* HOVER ANIMATION */
-.f-cols a:hover{
-color:#fff;
-transform:translateX(5px);
-}
-
-/* RIGHT */
-.f-right{
-flex:1;
-min-width:280px;
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
-padding:30px;
-border-radius:16px;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-}
-
-/* INPUT */
-.subscribe-box{
-display:flex;
-background:#fff;
-border-radius:30px;
-overflow:hidden;
-margin-top:10px;
-}
-
-.subscribe-box input{
-flex:1;
-border:none;
-padding:12px;
-outline:none;
-}
-
-.subscribe-box button{
-background:#6c5ce7;
-border:none;
-color:#fff;
-padding:0 20px;
-font-size:18px;
-cursor:pointer;
-transition:0.3s;
-}
-
-/* BUTTON HOVER */
-.subscribe-box button:hover{
-background:#4834d4;
-transform:scale(1.05);
-}
-
-/* SVG */
-.svg-box{
-margin-top:20px;
-animation:float 4s ease-in-out infinite;
-}
-
-/* FLOAT ANIMATION */
-@keyframes float{
-0%{transform:translateY(0)}
-50%{transform:translateY(-10px)}
-100%{transform:translateY(0)}
-}
-
-/* BOTTOM */
-.f-bottom{
-text-align:center;
-margin-top:40px;
-color:#aaa;
-font-size:13px;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-.footer-wrap{
-flex-direction:column;
-}
-.f-cols{
-flex-direction:column;
-}
-}
+</script>
 </style>
+
 </head>
 
 <body>
- 
-<!-- NAV -->
+<!-- NAVBAR -->
 <div class="nav">
-💰 EarnPro Hub
-<div class="toggle" onclick="toggleMode()">🌙</div>
+<div class="logo">💰 EarnPro Hub</div>
+<div class="nav-links">
+<a href="#">Home</a>
+<a href="#">Offers</a>
+<a href="#">Contact</a>
+</div>
 </div>
 
-<!-- FILTER -->
-<div class="filter">
-<button onclick="filterApp('all',this)" class="active">All</button>
-<button onclick="filterApp('free',this)">Free Loot</button>
-<button onclick="filterApp('crypto',this)">Crypto</button>
-<button onclick="filterApp('card',this)">Credit Card</button>
-<button onclick="filterApp('website',this)">Website</button>
-<button onclick="filterApp('app',this)">App</button>
-</div>
-
-<div class="container">
-<div class="card website app">
-
-<div class="card-header">
-<img src="https://offline-agent-bk.s3.ap-south-1.amazonaws.com/profit_share1710412785003" style="width:60px;border-radius:10px;">
+<!-- HERO -->
+<div class="hero">
 <div>
-<h3>🔥 Times Prime Lite Offer</h3>
-<span style="color:green;font-weight:bold">₹400 Profit + ₹700 OFF</span>
+<h1>🔥 Earn ₹1000 Daily</h1>
+<p>Best Refer & Earn Apps 2026</p>
+<a href="#apps" class="btn">Start Earning 🤑</a>
 </div>
+<img src="https://cdn-icons-png.flaticon.com/512/2331/2331943.png">
 </div>
-
-<p style="color:red;font-weight:bold;">⏳ Limited Time Offer</p>
-
-<div class="grid">
-<div>Profit<br><b>₹400</b></div>
-<div>Confirm Time<br><b>15 Days</b></div>
+ <div class="filter">
+<button onclick="filterApp('all')">All</button>
+<button onclick="filterApp('free')">Free</button>
+<button onclick="filterApp('app')">Apps</button>
 </div>
+<!-- YAHI PAR HUM STEP BY STEP SAB ADD KARENGE -->
+<div id="apps">
 
-<div class="code" onclick="copyCode(this)">
-🎁 Use Code: TIMES500
-</div>
-
-<a href="https://earningshub.co/MOHD-QAMIL-177739441420546215199" target="_blank" class="btn main">
-💰 Get ₹400 Profit Now
-</a>
-
-<button class="btn guide" onclick="toggleSteps('tp1')">📖 Steps</button>
-
-<div id="tp1" class="steps">
-✔ Link open karo<br>
-✔ Times Prime Lite (6 month) select karo<br>
-✔ Code <b>TIMES500</b> apply karo<br>
-✔ Payment complete karo<br>
-✔ 15 din me ₹400 reward milega 🤑
-</div>
-
-<div style="margin-top:10px;font-size:13px;">
-✔ ₹200 Amazon Voucher Extra<br>
-✔ New & Existing Users Allowed<br>
-✔ Instant Tracking (1 hour)
-</div>
-
-</div>
- 
-
-<!-- PAYTM -->
-<div class="card free app">
-<div class="card-header">
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Paytm_logo.png">
-<div>
-<h3>🔥 Paytm Offer</h3>
-<span style="color:green;font-weight:bold">₹100 Signup Bonus</span>
-</div>
-</div>
-
-<div class="grid">
-<div>Bonus<br><b>₹100</b></div>
-<div>Type<br><b>UPI</b></div>
-</div>
-
-<div class="code">🎁 Signup & Earn</div>
-
-<a href="https://p.paytm.me/xCTH/svtl01kg?utmt=042909" target="_blank" class="btn primary">
-💰 Get ₹100 Now
-</a>
-
-<p style="color:green;font-size:13px;">
-✔ Instant Cashback<br>
-✔ Trusted App
-</p>
-</div>
-
-
-<!-- PHONEPE -->
-<div class="card free app">
-<div class="card-header">
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/71/PhonePe_Logo.png">
-<div>
-<h3>PhonePe Offer</h3>
-<span style="color:green;font-weight:bold">₹200 Cashback</span>
-</div>
-</div>
-
-<div class="grid">
-<div>Bonus<br><b>₹200</b></div>
-<div>Type<br><b>UPI</b></div>
-</div>
-
-<a href="https://phon.pe/0q3oo7gt" target="_blank" class="btn primary">
-💰 Claim ₹200
-</a>
-
-<p style="color:green;font-size:13px;">
-✔ Easy Signup<br>
-✔ Instant Reward
-</p>
-</div>
-
-
-<!-- GPAY -->
-<div class="card free app">
-<div class="card-header">
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Pay_Logo.png">
-<div>
-<h3>Google Pay</h3>
-<span style="color:green;font-weight:bold">₹21 Reward</span>
-</div>
-</div>
-
-<div class="grid">
-<div>Bonus<br><b>₹21</b></div>
-<div>Type<br><b>Payment</b></div>
-</div>
-
-<a href="https://gpay.app.goo.gl/invite-m8rf71" target="_blank" class="btn primary">
-💰 Earn ₹21
-</a>
-
-<p style="color:green;font-size:13px;">
-✔ First Payment Offer<br>
-✔ Secure App
-</p>
-</div>
-
-
-<!-- BHIM -->
-<div class="card free app">
-<div class="card-header">
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/89/BHIM_Logo.png">
-<div>
-<h3>BHIM UPI</h3>
-<span style="color:green;font-weight:bold">Free Bonus</span>
-</div>
-</div>
-
-<div class="grid">
-<div>Code<br><b>UjQnMc</b></div>
-<div>Type<br><b>UPI</b></div>
-</div>
-
-<div class="code">🎁 Use Code: UjQnMc</div>
-
-<a href="https://bhimnpci.page.link/app" target="_blank" class="btn primary">
-💰 Join Now
-</a>
-
-<p style="color:green;font-size:13px;">
-✔ Govt App<br>
-✔ Safe & Secure
-</p>
-</div>
-
-
-<!-- CRED -->
+<!-- TIMES PRIME -->
 <div class="card app">
-<div class="card-header">
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/CRED-LOGO2.png">
-<div>
-<h3>CRED App</h3>
-<span style="color:green;font-weight:bold">₹50 Discount</span>
+<h3>🔥 Times Prime</h3>
+<p style="color:green">₹400 Profit</p>
+
+<div class="code">Code: TIMES500</div>
+
+<a href="#" class="btn">Get ₹400</a>
+</div>
+<div class="footer">
+<p>© 2026 EarnPro Hub</p>
 </div>
 </div>
-
-<div class="grid">
-<div>Bonus<br><b>₹50</b></div>
-<div>Type<br><b>Bill Pay</b></div>
-</div>
-
-<a href="https://app.cred.club/spQx/hocrfjp5" target="_blank" class="btn primary">
-💰 Get ₹50
-</a>
-
-<p style="color:green;font-size:13px;">
-✔ Credit Card Offers<br>
-✔ Secure Payments
-</p>
-</div>
-
-
-<!-- MAXPE -->
-<div class="card app">
-<div class="card-header">
-<img src="https://play-lh.googleusercontent.com/y88W...">
-<div>
-<h3>MaxPe App</h3>
-<span style="color:green;font-weight:bold">₹150 Bonus</span>
-</div>
-</div>
-
-<div class="grid">
-<div>Bonus<br><b>₹150</b></div>
-<div>Code<br><b>US78971039145</b></div>
-</div>
-
-<div class="code">🎁 Code: US78971039145</div>
-
-<a href="https://play.google.com/store/apps/details?id=com.vuvrecharge&referrer=US78971039145" target="_blank" class="btn primary">
-💰 Start Earning
-</a>
-
-<p style="color:green;font-size:13px;">
-✔ Lifetime Cashback<br>
-✔ Recharge Offers
-</p>
-</div>
-
-
-<!-- REDROB -->
-<div class="card free app">
-<div class="card-header">
-<img src="https://via.placeholder.com/60">
-<div>
-<h3>Redrob Signal</h3>
-<span style="color:green;font-weight:bold">₹10 Bonus</span>
-</div>
-</div>
-
-<div class="grid">
-<div>Bonus<br><b>₹10</b></div>
-<div>Code<br><b>AXCWCMT7</b></div>
-</div>
-
-<div class="code">🎁 Code: AXCWCMT7</div>
-
-<a href="https://app.signal.redrob.io/bo7k3of" target="_blank" class="btn primary">
-💰 Get ₹10
-</a>
-
-<p style="color:green;font-size:13px;">
-✔ Easy Signup<br>
-✔ Instant Bonus
-</p>
-</div>
-
-
-<!-- AIRTEL -->
-<div class="card app">
-<div class="card-header">
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Airtel_logo.png">
-<div>
-<h3>Airtel Bank</h3>
-<span style="color:green;font-weight:bold">₹100 Cashback</span>
-</div>
-</div>
-
-<div class="grid">
-<div>Bonus<br><b>₹100</b></div>
-<div>Type<br><b>Account</b></div>
-</div>
-
-<a href="https://i.airtel.in/refandearnYNQLOOCKYC" target="_blank" class="btn primary">
-💰 Open Account
-</a>
-
-<p style="color:green;font-size:13px;">
-✔ Instant Cashback<br>
-✔ Secure Bank
-</p>
-</div>
-
-<!-- FREE APP -->
-<div class="card free app">
-<div class="card-header">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAhFBMVEU8AFAi0IEg14M2W189AE44LVgh04IopncvhWwlvXwyamUh1YI9AEw5L1gg2YQ7E1I1X186J1Qe34Yxbmcjxn8nsXkiyoAyZmQrlXI5OlguiW0xf2g1Sl47AFMxcmc4NFg1T180WmE0VGArnHMoqXc7DVI6GVQkv305H1Yqn3Q3SVs3QlqJUpk5AAACeklEQVR4nO3dbXOaQBSGYXYl2ygividNbJOmxqTt//9/pTP90FFYlgAe9vS+vuM89xBn1AgmCQAAAAAAAAAAAAAAAAAA/6W0L9IhdYrlpB/LlXRKjXxt+7FejvQs3ljTDzuhUAiFFFIoj0IKKZRHIYUUyqOQQgrlUUghhfIopJBCefk6ayHGwmIzC3Z370kcbWGb/67N76IsbCGdURg7CqX3dUeh9L7uKJTe1x2F0vu6o1B6X3eChVf6tp1c4eeH2w95PHxpFSlWmE5avU//x8LuZkX4MMHCj3/W4uz2a/CyKAv/TNslgdtiLTTZNg8bF22hcfunoHXxFpaJQWcx4sLAxJgLjXPPzQOjLiwbvzUujLzQuJemibEXGtd0PUH0hcZt/CPjLzT20btSQWGZOFdeaOytZ6eKQmMf6ofqKDT2vnapkkJjv2svNPaT9sIysXqsnkJjj9oLTTZ9rdirqbBMPF0OVlVosrfLjxl1FZZnsVBeaLKd9kKzOH+nMdZC57+O3nNkdvZ3mm48F+8PeT2+v9Ad32/qrQ6eY7Pzl6invP6R8oun7dUKa16g/D125T3/w41upUuh/xu02UjuBDFgoe/98BUNV+h26gun+guv1eBHIYUUyqOQQgrlUUghhfIopJBCeRRSSKE8CimkUB6FFFIoj0IKKZRHIYUUyqOQQgrlUUih8sLVQnvhSf05TKZOeWHqu6+sjsKD9sIk/VGfqKMwKba1z0QlhWm+rzuLSgqT9HRcVJ/G0RQufb8lujg2f99+/nzcm6pjt1eYH2Ll/T3YnwGPkKavv6qOfRl8e6Be7hzY/a6DAAAAAAAAAAAAAAAAAADE6jd6+ExvptEO9wAAAABJRU5ErkJggg==">
-<div>
-<h3>Navi App</h3>
-<span style="color:green">₹100 Bonus</span>
-</div>
-</div>
-
-<div class="grid">
-<div>Refer<br><b>₹10-₹200</b></div>
-<div>Withdraw<br><b>UPI</b></div>
-</div>
-
-<div class="code" onclick="copyCode(this)">🎁 Code: ABC123</div>
-
-<a href="#" class="btn main">Earn Now</a>
-<button class="btn guide" onclick="toggleSteps('s1')">Steps</button>
-
-<div id="s1" class="steps">
-✔ Install App<br>
-✔ Signup karo<br>
-✔ Code lagao<br>
-✔ Cashback lo 🤑
-</div>
-</div>
-
-<!-- CRYPTO -->
-<div class="card crypto app">
-<div class="card-header">
-<img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png">
-<div>
-<h3>Crypto App</h3>
-<span style="color:green">₹500 Bonus</span>
-</div>
-</div>
-
-<div class="grid">
-<div>Refer<br><b>₹200</b></div>
-<div>Withdraw<br><b>Bank</b></div>
-</div>
-
-<div class="code" onclick="copyCode(this)">🎁 Code: XYZ789</div>
-
-<a href="#" class="btn main">Join Now</a>
-<button class="btn guide" onclick="toggleSteps('s2')">Steps</button>
-
-<div id="s2" class="steps">
-✔ Signup karo<br>
-✔ KYC complete karo<br>
-✔ Earn karo 🤑
-</div>
-</div>
-
-</div>
-<div style="text-align:center;padding:30px">
-<h1>🔥 Earn ₹1000 Daily from Free Apps</h1>
-<p>Best Refer & Earn Apps 2026 | Instant UPI Cashback</p>
-<a href="#apps" style="background:#6c5ce7;color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:bold;">
-Start Earning Now 🤑
-</a>
-</div>
-
- <div style="text-align:center;margin:20px">
-<p>✔ 100% Working Apps</p>
-<p>✔ Instant Withdrawal</p>
-<p>✔ Daily New Offers</p>
-</div>
-<div class="footer-ultra">
-
-  <div class="footer-wrap">
-
-    <!-- LEFT -->
-    <div class="f-left">
-      <h2>💰 EarnPro Hub</h2>
-      <p>Best earning apps, cashback deals & refer & earn offers. Daily updated.</p>
-
-      <div class="f-cols">
-
-        <div>
-          <h4>Resources</h4>
-          <a href="#">Blog</a>
-          <a href="#">Guides</a>
-          <a href="#">All Offers</a>
-        </div>
-
-        <div>
-          <h4>Company</h4>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-          <a href="privacy.html">Privacy</a>
-        </div>
-
-        <div>
-          <h4>Social</h4>
-          <a href="#">Telegram</a>
-          <a href="#">YouTube</a>
-          <a href="#">WhatsApp</a>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- RIGHT -->
-    <div class="f-right">
-      <h3>🚀 Get Daily Earning Tricks</h3>
-      <p>Join & never miss high-paying offers</p>
-
-      <div class="subscribe-box">
-        <input type="email" placeholder="Enter your email">
-        <button>→</button>
-      </div>
-
-      <!-- SVG Illustration -->
-      <div class="svg-box">
-        <svg viewBox="0 0 200 150">
-          <circle cx="50" cy="50" r="30" fill="#6c5ce7"/>
-          <rect x="90" y="30" width="70" height="70" rx="12" fill="#00cec9"/>
-          <circle cx="150" cy="110" r="20" fill="#fdcb6e"/>
-        </svg>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="f-bottom">
-    © 2026 EarnPro Hub | All Rights Reserved
-  </div>
-
-</div>
-<script>
-function toggleMode(){
- document.body.classList.toggle("dark");
-}
-
-function toggleSteps(id){
- let x=document.getElementById(id);
- x.style.display=(x.style.display==="block")?"none":"block";
-}
-
-function copyCode(el){
- let text=el.innerText;
- navigator.clipboard.writeText(text);
- el.innerHTML="✅ Copied!";
- setTimeout(()=>{el.innerHTML=text},2000);
-}
-
-function filterApp(cat,btn){
- let cards=document.querySelectorAll('.card');
- let buttons=document.querySelectorAll('.filter button');
-
- buttons.forEach(b=>b.classList.remove('active'));
- btn.classList.add('active');
-
- cards.forEach(c=>{
-   if(cat==="all" || c.classList.contains(cat)){
-     c.style.display="block";
-   } else {
-     c.style.display="none";
-   }
- });
-}
-</script>
-
 </body>
 </html>

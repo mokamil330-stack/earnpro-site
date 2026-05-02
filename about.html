@@ -1,29 +1,154 @@
+<h1>ℹ About Us</h1>
+<div style="background:#6c5ce7;color:#fff;padding:15px;text-align:center;font-weight:600;">
+💰 EarnPro Hub
+</div>
 <!DOCTYPE html>
 <html>
 <head>
 <title>About EarnPro Hub</title>
-<meta name="description" content="About EarnPro Hub - Best earning apps and cashback offers platform">
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#6c5ce7,#00cec9);
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:20px;
+}
+
+/* GLASS CARD */
+.glass{
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(15px);
+border-radius:20px;
+padding:40px;
+width:100%;
+max-width:900px;
+color:#fff;
+box-shadow:0 10px 40px rgba(0,0,0,0.2);
+animation:fadeUp 1s ease;
+}
+
+/* HEADING */
+.glass h1{
+font-size:32px;
+margin-bottom:15px;
+}
+
+/* SUB HEADING */
+.glass h2{
+margin-top:20px;
+font-size:20px;
+}
+
+/* TEXT */
+.glass p{
+color:#eee;
+line-height:1.7;
+}
+
+/* LIST */
+.glass ul{
+padding-left:20px;
+}
+
+.glass li{
+margin-bottom:8px;
+}
+
+/* BUTTON */
+.btn{
+margin-top:25px;
+display:inline-block;
+padding:12px 25px;
+background:#fff;
+color:#6c5ce7;
+border-radius:10px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+background:#f1f1f1;
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* FLOAT EFFECT */
+body::before{
+content:'';
+position:absolute;
+width:300px;
+height:300px;
+background:#fff;
+opacity:0.1;
+border-radius:50%;
+top:10%;
+left:10%;
+animation:float 6s infinite ease-in-out;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(30px)}
+}
+</style>
+
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<div class="nav">
-<div class="logo">💰 EarnPro</div>
-<div class="nav-links">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-<a href="privacy.html">Privacy</a>
-</div>
-</div>
+<div class="glass">
 
-<div class="container">
-<h1>About Us</h1>
-<p>EarnPro Hub ek platform hai jahan aapko best earning apps, cashback offers aur refer & earn deals milte hain.</p>
+<h1>ℹ About EarnPro Hub</h1>
 
-<p>Hum daily new offers update karte hain jisse users easily earning kar sake.</p>
+<p><b>EarnPro Hub</b> is a trusted platform where you can discover the best <b>earn money apps, refer & earn programs, cashback offers, and online earning opportunities</b> in one place.</p>
+
+<p>Our mission is to help users find <b>genuine and working earning apps</b> so they can generate extra income easily from their mobile or laptop.</p>
+
+<h2>🚀 What We Offer</h2>
+<ul>
+<li>✔ Daily updated earning apps</li>
+<li>✔ Refer & Earn opportunities</li>
+<li>✔ Instant cashback offers</li>
+<li>✔ Crypto earning platforms</li>
+<li>✔ Step-by-step earning guides</li>
+</ul>
+
+<h2>💰 Why Choose EarnPro Hub?</h2>
+<ul>
+<li>✔ 100% tested & working offers</li>
+<li>✔ Beginner-friendly steps</li>
+<li>✔ Fast earning opportunities</li>
+<li>✔ Regular updates</li>
+</ul>
+
+<h2>⚠ Disclaimer</h2>
+<p>EarnPro Hub is not officially affiliated with any app or company. Some links may be referral links, and we may earn a commission at no extra cost to you.</p>
+
+<p>All offers depend on the respective app’s terms and conditions. Please verify details before joining.</p>
+
+<h2>📩 Contact</h2>
+<p>If you have any questions or suggestions, feel free to reach out via our Contact page.</p>
+
+<a href="index.html" class="btn">⬅ Back to Home</a>
+
 </div>
 
 </body>

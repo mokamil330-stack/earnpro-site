@@ -4,101 +4,227 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>EarnPro Hub | Earn Money Apps 2026</title>
-<meta name="description" content="Best Earn Money Apps 2026 | Refer and Earn India">
+<title>EarnPro Hub | Earn Money Apps</title>
+<meta name="description" content="Best Earn Money Apps 2026 | Refer & Earn India">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 body{background:#f5f7fb}
- .nav{
-display:flex;justify-content:space-between;
-padding:15px 20px;background:#fff
+
+/* NAVBAR */
+.nav{
+display:flex;justify-content:space-between;align-items:center;
+padding:15px 30px;background:#fff;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+position:sticky;top:0;z-index:100;
 }
 
-.logo{font-weight:bold;color:#6c5ce7}
+.logo{font-weight:600;font-size:20px;color:#6c5ce7}
 
+.nav-links a{
+margin:0 12px;text-decoration:none;color:#333;font-weight:500
+}
+
+.search-box{
+background:#f1f2f6;padding:8px 15px;border-radius:25px;
+display:flex;align-items:center;
+}
+
+.search-box input{
+border:none;background:none;outline:none;width:150px
+}
+
+/* HERO */
 .hero{
-display:flex;justify-content:space-between;
-padding:40px;align-items:center
+display:flex;justify-content:space-between;align-items:center;
+padding:60px 30px;flex-wrap:wrap;
+background:linear-gradient(135deg,#e0e7ff,#f5f7fb);
 }
 
-.hero img{width:200px}
+.hero-left{max-width:500px}
 
-.btn{
+.hero-left h1{
+font-size:36px;margin-bottom:10px
+}
+
+.hero-left span{color:#6c5ce7}
+
+.hero-left p{color:#555;margin-bottom:15px}
+
+.hero-btn{
 background:#6c5ce7;color:#fff;
-padding:10px 15px;border-radius:8px;text-decoration:none
+padding:12px 20px;border-radius:8px;text-decoration:none
 }
- .filter{text-align:center;margin:10px}
+
+/* ANIMATION */
+.hero-right img{
+width:300px;
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-15px)}
+100%{transform:translateY(0)}
+}
+
+/* FILTER */
+.filter{
+text-align:center;margin:20px
+}
+
 .filter button{
-margin:5px;padding:8px 15px;border-radius:20px;
-border:1px solid #6c5ce7;background:#fff
-}
-.card{
-background:#fff;margin:15px;padding:15px;
-border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1)
+padding:8px 15px;margin:5px;
+border-radius:20px;border:1px solid #6c5ce7;
+background:#fff;color:#6c5ce7;cursor:pointer;
+transition:0.3s;
 }
 
-.code{
-background:#ffeaa7;padding:8px;border-radius:5px;
-text-align:center;margin:10px 0
+.filter button:hover{
+background:#6c5ce7;color:#fff
 }
 
-<script>
-function filterApp(cat){
-document.querySelectorAll('.card').forEach(c=>{
-c.style.display=(cat=="all"||c.classList.contains(cat))?"block":"none"
-})
+/* CONTENT PLACE */
+.container{
+max-width:1000px;margin:auto;padding:10px
 }
 
- .footer{
-background:#2d3436;color:#fff;
-text-align:center;padding:20px;margin-top:20px
+/* FOOTER */
+.footer{
+background:#0f172a;color:#fff;
+padding:50px 20px;margin-top:40px
 }
-</script>
+
+.footer-grid{
+display:flex;justify-content:space-between;
+flex-wrap:wrap;gap:30px;max-width:1100px;margin:auto
+}
+
+.footer-col h4{margin-bottom:10px}
+
+.footer-col a{
+display:block;color:#aaa;text-decoration:none;margin:5px 0;
+transition:0.3s
+}
+
+.footer-col a:hover{
+color:#fff;transform:translateX(5px)
+}
+
+.footer-right{
+background:#1e293b;padding:20px;border-radius:10px
+}
+
+.subscribe{
+display:flex;margin-top:10px;background:#fff;border-radius:25px;
+overflow:hidden
+}
+
+.subscribe input{
+flex:1;border:none;padding:10px;outline:none
+}
+
+.subscribe button{
+background:#6c5ce7;color:#fff;border:none;padding:0 15px;
+cursor:pointer
+}
+
+.copy{
+text-align:center;margin-top:20px;color:#aaa;font-size:13px
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.hero{flex-direction:column;text-align:center}
+.hero-right img{margin-top:20px;width:220px}
+}
 </style>
 
 </head>
 
 <body>
+
 <!-- NAVBAR -->
 <div class="nav">
-<div class="logo">💰 EarnPro Hub</div>
+<div class="logo">💰 EarnPro</div>
+
 <div class="nav-links">
 <a href="#">Home</a>
 <a href="#">Offers</a>
+<a href="#">Blog</a>
 <a href="#">Contact</a>
+</div>
+
+<div class="search-box">
+<input type="text" placeholder="Search...">
 </div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
-<div>
-<h1>🔥 Earn ₹1000 Daily</h1>
-<p>Best Refer & Earn Apps 2026</p>
-<a href="#apps" class="btn">Start Earning 🤑</a>
+<div class="hero-left">
+<h1>Make your <span>money move</span> 💸</h1>
+<p>Earn daily with best apps, cashback offers & refer system.</p>
+<a href="#apps" class="hero-btn">Start Earning 🚀</a>
 </div>
-<img src="https://cdn-icons-png.flaticon.com/512/2331/2331943.png">
-</div>
- <div class="filter">
-<button onclick="filterApp('all')">All</button>
-<button onclick="filterApp('free')">Free</button>
-<button onclick="filterApp('app')">Apps</button>
-</div>
-<!-- YAHI PAR HUM STEP BY STEP SAB ADD KARENGE -->
-<div id="apps">
 
-<!-- TIMES PRIME -->
-<div class="card app">
-<h3>🔥 Times Prime</h3>
-<p style="color:green">₹400 Profit</p>
-
-<div class="code">Code: TIMES500</div>
-
-<a href="#" class="btn">Get ₹400</a>
+<div class="hero-right">
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png">
 </div>
+</div>
+
+<!-- FILTER -->
+<div class="filter">
+<button>All</button>
+<button>Free</button>
+<button>Apps</button>
+<button>Crypto</button>
+<button>Cards</button>
+</div>
+
+<!-- CONTENT AREA -->
+<div class="container" id="apps">
+<!-- YAHAN TUM CARDS DALOGE -->
+</div>
+
+<!-- FOOTER -->
 <div class="footer">
-<p>© 2026 EarnPro Hub</p>
+
+<div class="footer-grid">
+
+<div class="footer-col">
+<h4>EarnPro Hub</h4>
+<p>Best earning apps & cashback offers platform.</p>
+</div>
+
+<div class="footer-col">
+<h4>Links</h4>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</div>
+
+<div class="footer-col">
+<h4>Legal</h4>
+<a href="#">Privacy</a>
+<a href="#">Terms</a>
+</div>
+
+<div class="footer-right">
+<h4>Get Updates</h4>
+<div class="subscribe">
+<input placeholder="Enter email">
+<button>→</button>
 </div>
 </div>
+
+</div>
+
+<div class="copy">© 2026 EarnPro Hub</div>
+
+</div>
+
 </body>
 </html>
